@@ -32,8 +32,8 @@ namespace RPG_Character
             updateStats();
             int d1 = RPGChar.RollDice(2, 20);
             int d2 = RPGChar.RollDice(1000, 8);
-            MessageBox.Show(d1.ToString());
-            MessageBox.Show(d2.ToString());
+           // MessageBox.Show(d1.ToString());
+           // MessageBox.Show(d2.ToString());
             
         }
 
@@ -63,9 +63,20 @@ namespace RPG_Character
             }
 
             listPartyMembers.Items.Clear();
+            Brush color1 = Brushes.Teal;
+            Brush color2 = Brushes.Gold;
+
             foreach (RPGChar r in characterSheet.PartyMembers)
             {
                 ListBoxItem i = new ListBoxItem();
+                if (listPartyMemebers.Items.Count % 2 == 0)
+                {
+                    i.Background = color1;
+                }
+                else
+                {
+                    i.Background = color2;
+                }
                 i.Content = r.Name;
                 listPartyMembers.Items.Add(i);
             }

@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Image Source="/POTOO.jpg" Stretch="Fill"/>
+
         <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Margin="95,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Character Name" HorizontalAlignment="Left" Margin="107,63,0,0" VerticalAlignment="Top"/>
         <Button x:Name="ButtonUpdate" Content="Update" HorizontalAlignment="Left" Margin="95,324,0,0" VerticalAlignment="Top" Click="ButtonUpdate_Click"/>
