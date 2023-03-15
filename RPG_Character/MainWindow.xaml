@@ -23,6 +23,15 @@
         <TextBlock x:Name="textWIS" HorizontalAlignment="Left" Margin="134,191,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
         <TextBlock x:Name="textLUC" HorizontalAlignment="Left" Margin="269,191,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
         <Button x:Name="REROLL" Content="Re-Roll" HorizontalAlignment="Left" Margin="199,324,0,0" VerticalAlignment="Top" Click="REROLL_Click"/>
+        <ListBox x:Name="listPotentialMembers" Margin="355,94,280,175">
+            <ListBoxItem Content="Paul Bunyan"/>
+            <ListBoxItem Content="Dr. Plagus"/>
+            <ListBoxItem Content="DJ Jazzy"/>
+            <ListBoxItem Content="Bunger"/>
+        </ListBox>
+        <Label Content="Potential party memebrs" HorizontalAlignment="Left" Margin="368,63,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="listPartyMembers" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="565,94,60,175"/>
+        <Label Content="Party Members" HorizontalAlignment="Left" Margin="583,63,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

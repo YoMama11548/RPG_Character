@@ -24,6 +24,7 @@ namespace RPG_Character
         private int _maxStrength = 20;
         private int _wisdom;
         private int _maxWisdom = 20;
+        private List<RPGChar> _partyMembers = new List<RPGChar>();
         #endregion Fields
 
 
@@ -34,8 +35,13 @@ namespace RPG_Character
         //Properties
         public CharacterClasses ChacterClass
         {
-            get {  return _characterClass;}
+            get { return _characterClass; }
             set { _characterClass = value; }
+        }
+        public List<RPGChar> PartyMembers
+        {
+            get { return _partyMembers; }
+            set { _partyMembers = value; }
         }
         public int Charisma { get { return _charisma; } }
         public int Dexterity { get { return _dexterity; } }
@@ -60,6 +66,19 @@ namespace RPG_Character
             _luck = _rng.Next(1, _maxLuck + 1);
             _strength = _rng.Next(1, _maxStrength + 1);
             _wisdom = _rng.Next(1, _maxWisdom + 1);
+        }
+
+        public static int RollDice (int numberOfDice, int numberOfSides)
+        {
+            Random r = new Random();
+            int total = 0;
+
+            for(int i = 0; i < numberOfDice; i++) 
+            {
+                total += r.Next(1, numberOfSides);
+            }
+
+            return total;
         }
     }
 
